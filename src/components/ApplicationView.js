@@ -5,6 +5,7 @@ import EmployeeList from "./EmployeeList";
 import CandyList from "./CandyList";
 import StoreEmployee from "./StoreEmployee";
 import { Route } from 'react-router-dom'
+import CandyTypeList from "./CandyTypeList";
 
 class ApplicationView extends Component {
     storeArray = [
@@ -98,10 +99,13 @@ class ApplicationView extends Component {
                     return <StoreList stores ={this.state.stores} />
                 } } />
                 <Route path="/candy" render={()=>{
-                    return <CandyList candyList={this.state.candies} />
+                    return <CandyList candies={this.state.candies} candyTypes = {this.state.candyTypes} />
                 }} />
                 <Route path="/employees" render={ () => {
                     return <StoreEmployee stores={this.state.stores} employeeList={this.state.employees} />
+                }} />
+                <Route path="/candies" render={()=>{
+                    return <CandyTypeList candies={this.state.candies} candyTypes = {this.state.candyTypes} />
                 }} />
                 {/*<StoreList stores={this.state.stores} />
                 <EmployeeList employeeList={this.state.employees} />

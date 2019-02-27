@@ -2,13 +2,21 @@ import React, { Component } from 'react'
 
 import "./kandyKorner.css"
 class CandyList extends Component {
-    render () {
+    render() {
         return (
             <section className="margin_top">
-                <h2> Candies</h2>
                 {
-                    this.props.candyList.map(candy =>
-                        <section key = {`candy--${candy.id}`}>{candy.name}</section>)
+                    this.props.candyTypes.map(candyType =>
+                        <article key = {`type--${candyType.id}`}>
+                            <h3>{candyType.type}</h3>
+                            {
+                                this.props.candies.filter(candy => candy.typeId === candyType.id)
+                                    .map(candy =>
+                                        <section key={`candy--${candy.id}`}>{candy.name}</section>)
+                            }
+                            <hr/>
+                        </article>
+                    )
                 }
             </section>
         )
