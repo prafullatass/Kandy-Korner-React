@@ -4,7 +4,7 @@ import ListStoreEmp from './ListStoreEmp';
 class StoreEmployee extends Component {
     render() {
         return(
-            <section className = "storeEmployee">
+            <section className = "storeEmployee margin_top">
                 {
                     this.props.stores.map(store =>
                         <ListStoreEmp key={store.id} Store = {store} Employees =
