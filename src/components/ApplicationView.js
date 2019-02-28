@@ -52,7 +52,10 @@ class ApplicationView extends Component {
         Promise.all(promises)
             .then(() => fetch("http://localhost:5002/candies"))
             .then(r => r.json())
-            .then(candies => this.setState({ candies: candies }))
+            .then(candies => {
+                this.setState({ candies: candies })
+                document.querySelector("#delAll").disabled = true
+            })
     }
 
     render() {

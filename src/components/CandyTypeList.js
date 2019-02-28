@@ -19,7 +19,7 @@ class CandyTypeList extends Component {
                             )
                     )
                 }
-                <button onClick={() => {this.props.deleteAllCandies()}}>DELETE ALL</button>
+                <button id = "delAll" onClick={() => {this.props.deleteAllCandies()}}>DELETE ALL</button>
             </section>
         )
     }
