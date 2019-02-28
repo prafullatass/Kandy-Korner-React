@@ -58,14 +58,14 @@
   ],
   "candies": [
     {
-      "id": 1,
-      "typeId": 1,
-      "name": "M&M"
-    },
-    {
-      "id": 2,
-      "typeId": 2,
-      "name": "Mint M&M"
-    }
+        "id": 1,
+        "typeId": 1,
+        "name": "M&M"
+      },
+      {
+        "id": 2,
+        "typeId": 2,
+        "name": "Mint M&M"
+      }
   ]
 }

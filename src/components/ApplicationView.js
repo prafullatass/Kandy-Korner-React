@@ -43,11 +43,13 @@ class ApplicationView extends Component {
     }
 
     deleteAllCandies = () => {
+        let promises = []
         this.state.candies.forEach(candy => {
-            return fetch(`http://localhost:5002/candies/${candy.id}`, {
+            promises.push( fetch(`http://localhost:5002/candies/${candy.id}`, {
                 method: "DELETE"
-            })
+            }))
         })
+        Promise.all(promises)
             .then(() => fetch("http://localhost:5002/candies"))
             .then(r => r.json())
             .then(candies => this.setState({ candies: candies }))

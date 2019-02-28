@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM.render(
     <Router>
-        {console.log("index")}
+
         <KandyKorner />
     </Router>
 , document.querySelector("#root"))
