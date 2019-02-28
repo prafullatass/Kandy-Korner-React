@@ -5,17 +5,21 @@ class CandyTypeList extends Component {
         console.log(this.props.candies)
         return (
             <section className="margin_top"> Candy  Type
-            <hr/>
+            <hr />
                 {
                     this.props.candies.map(candy =>
                         Array.of(this.props.candyTypes.find(candyType => candyType.id === candy.typeId))
                             .map(type =>
                                 <section key={`candies--${candy.id}`}>
                                     {candy.name} {type.type}
+                                    <button onClick={() => { this.props.discontinued(`${candy.id}`) }}>
+                                        Discontinued
+                                    </button>
                                 </section>
                             )
                     )
                 }
+                <button onClick={() => {this.props.deleteAllCandies()}}>DELETE ALL</button>
             </section>
         )
     }

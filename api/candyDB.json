@@ -1,0 +1,71 @@
+{
+  "stores": [
+    {
+      "id": 1,
+      "name": "Candy Shop",
+      "address": "Cool spring Galleria"
+    },
+    {
+      "id": 2,
+      "name": "Suger Rush",
+      "address": "Cool spring Blvd"
+    },
+    {
+      "id": 3,
+      "name": "Candy Shop",
+      "address": "500 Interstate"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Sandy",
+      "storeId": 1
+    },
+    {
+      "id": 2,
+      "name": "Key",
+      "storeId": 2
+    },
+    {
+      "id": 3,
+      "name": "Tom",
+      "storeId": 1
+    },
+    {
+      "id": 4,
+      "name": "Angela",
+      "storeId": 3
+    }
+  ],
+  "candyTypes": [
+    {
+      "id": 1,
+      "type": "chocolate"
+    },
+    {
+      "id": 2,
+      "type": "M&M"
+    },
+    {
+      "id": 3,
+      "type": "Mint"
+    },
+    {
+      "id": 4,
+      "type": "lemon"
+    }
+  ],
+  "candies": [
+    {
+      "id": 1,
+      "typeId": 1,
+      "name": "M&M"
+    },
+    {
+      "id": 2,
+      "typeId": 2,
+      "name": "Mint M&M"
+    }
+  ]
+}
