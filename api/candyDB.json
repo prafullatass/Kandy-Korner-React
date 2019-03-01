@@ -18,25 +18,68 @@
   ],
   "employees": [
     {
-      "id": 1,
-      "name": "Sandy",
-      "storeId": 1
-    },
-    {
-      "id": 2,
-      "name": "Key",
-      "storeId": 2
-    },
-    {
-      "id": 3,
-      "name": "Tom",
-      "storeId": 1
-    },
-    {
-      "id": 4,
-      "name": "Angela",
-      "storeId": 3
-    }
+        "name": "Benedict",
+        "storeId": 1,
+        "phNo": "604.374.2888 x6173",
+        "id": 1,
+        "Email": "Kolby@dulce.co.uk"
+      },
+      {
+        "name": "Arvid",
+        "storeId": 1,
+        "phNo": "(832)664-0535 x321",
+        "id": 2,
+        "Email": "Santa@hayden.biz"
+      },
+      {
+        "name": "Monica",
+        "storeId": 2,
+        "phNo": "073.805.6791 x90323",
+        "id": 3,
+        "Email": "Ofelia@cyril.ca"
+      },
+      {
+        "name": "Sandra",
+        "storeId": 3,
+        "phNo": "448-745-5466 x943",
+        "id": 4,
+        "Email": "Lina.Conn@pat.co.uk"
+      },
+      {
+        "name": "Rosa",
+        "storeId": 3,
+        "phNo": "(627)930-8832",
+        "id": 5,
+        "Email": "Torey_Beier@cydney.net"
+      },
+      {
+        "name": "Sylvester",
+        "storeId": 2,
+        "phNo": "590-700-1153 x830",
+        "id": 6,
+        "Email": "Darlene@gus.co.uk"
+      },
+      {
+        "name": "Joanne",
+        "storeId": 1,
+        "phNo": "1-519-127-8862 x213",
+        "id": 7,
+        "Email": "Chasity@issac.us"
+      },
+      {
+        "name": "Camron",
+        "storeId": 2,
+        "phNo": "1-887-311-6378 x541",
+        "id": 8,
+        "Email": "Malvina@talia.biz"
+      },
+      {
+        " name": "Amina",
+        "storeId": 804,
+        "phNo": "839.763.8956 x8958",
+        "id": 9,
+        "Email": "Bryce.McClure@rafaela.ca"
+      }
   ],
   "candyTypes": [
     {
@@ -56,5 +99,16 @@
       "type": "lemon"
     }
   ],
-  "candies": []
+  "candies": [
+    {
+        "id": 1,
+        "typeId": 1,
+        "name": "M&M"
+      },
+      {
+        "id": 2,
+        "typeId": 2,
+        "name": "Mint M&M"
+      }
+  ]
 }

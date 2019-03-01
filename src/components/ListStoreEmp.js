@@ -4,12 +4,14 @@ import "./kandyKorner.css"
 
 class ListStoreEmp extends Component {
     render() {
+        //console.log(this.props.Employees)
         return (
-            <section key={`storeEmp--${this.props.Store.id}`}>
-                <h4>{this.props.Store.name}</h4>
-                <p><strong>Employees :</strong>{this.props.Employees.join(", ")}</p>
-                <hr/>
-            </section>
+                <tr>
+                    <td>{this.props.Employee.name}</td>
+                    <td>{this.props.Employee.Email}</td>
+                    <td>{this.props.Employee.phNo}</td>
+                </tr>
+
         )
     }
 }

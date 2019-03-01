@@ -62,7 +62,8 @@ class ApplicationView extends Component {
     }
 
     render() {
-        console.log("render -- appview")
+        console.log(this.state.employees)
+
         return (
             <React.Fragment>
                 <Route exact path="/" render={() => {
