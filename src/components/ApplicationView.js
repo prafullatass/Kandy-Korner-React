@@ -6,23 +6,24 @@ import CandyList from "./CandyList";
 import StoreEmployee from "./StoreEmployee";
 import { Route } from 'react-router-dom'
 import CandyTypeList from "./CandyTypeList";
+import storeManager from "../modules/storeManager";
+import employeeManager from "../modules/employeeManager";
+import candiesManager from "../modules/candiesManager";
+import candyTypesManager from "../modules/candyTypesManager";
 
 class ApplicationView extends Component {
     componentDidMount() {
         const newState = {}
-        console.log("componentDidMount -- appView")
-        fetch("http://localhost:5002/stores")
-            .then(r => r.json())
+
+        storeManager.getAll()
             .then(stores => newState.stores = stores)
-            .then(() => fetch("http://localhost:5002/employees")
-                .then(r => r.json()))
+        employeeManager.getAll()
             .then(employees => newState.employees = employees)
-            .then(() => fetch("http://localhost:5002/candyTypes")
-                .then(r => r.json()))
+        candyTypesManager.getAll()
             .then(candyTypes => newState.candyTypes = candyTypes)
-            .then(() => fetch("http://localhost:5002/candies")
-                .then(r => r.json()))
+        candiesManager.getAll()
             .then(candies => newState.candies = candies)
+
             .then(() => this.setState(newState))
     }
     state = {
@@ -34,27 +35,29 @@ class ApplicationView extends Component {
 
     discontinued = (id) => {
         console.log(this)
-        fetch(`http://localhost:5002/candies/${id}`, {
-            method: "DELETE"
-        })
-            .then(() => fetch("http://localhost:5002/candies"))
-            .then(r => r.json())
+        candiesManager.delete(id)
+            .then(candiesManager.getAll)
             .then(candies => this.setState({ candies: candies }))
+    }
+
+    disableButton(inputArray) {
+        console.log(inputArray)
+        if (inputArray.length === 0)
+            document.querySelector("#delAll").disabled = true
     }
 
     deleteAllCandies = () => {
         let promises = []
         this.state.candies.forEach(candy => {
-            promises.push( fetch(`http://localhost:5002/candies/${candy.id}`, {
-                method: "DELETE"
-            }))
+            promises.push(candiesManager.delete(candy.id))
         })
         Promise.all(promises)
-            .then(() => fetch("http://localhost:5002/candies"))
-            .then(r => r.json())
+            .then(candiesManager.getAll)
             .then(candies => {
                 this.setState({ candies: candies })
-                document.querySelector("#delAll").disabled = true
+                console.log(`candies : ${candies}`)
+                // document.querySelector("#delAll").disabled = true
+                this.disableButton(candies)
             })
     }
 
