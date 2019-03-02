@@ -1,0 +1,13 @@
+.card-width {
+    width : 15em;
+    border-radius : 10%;
+}
+
+.flex-container {
+    display: flex;
+    height: auto;
+    margin-bottom:10px;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+

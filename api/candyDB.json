@@ -18,97 +18,134 @@
   ],
   "employees": [
     {
-        "name": "Benedict",
-        "storeId": 1,
-        "phNo": "604.374.2888 x6173",
-        "id": 1,
-        "Email": "Kolby@dulce.co.uk"
-      },
-      {
-        "name": "Arvid",
-        "storeId": 1,
-        "phNo": "(832)664-0535 x321",
-        "id": 2,
-        "Email": "Santa@hayden.biz"
-      },
-      {
-        "name": "Monica",
-        "storeId": 2,
-        "phNo": "073.805.6791 x90323",
-        "id": 3,
-        "Email": "Ofelia@cyril.ca"
-      },
-      {
-        "name": "Sandra",
-        "storeId": 3,
-        "phNo": "448-745-5466 x943",
-        "id": 4,
-        "Email": "Lina.Conn@pat.co.uk"
-      },
-      {
-        "name": "Rosa",
-        "storeId": 3,
-        "phNo": "(627)930-8832",
-        "id": 5,
-        "Email": "Torey_Beier@cydney.net"
-      },
-      {
-        "name": "Sylvester",
-        "storeId": 2,
-        "phNo": "590-700-1153 x830",
-        "id": 6,
-        "Email": "Darlene@gus.co.uk"
-      },
-      {
-        "name": "Joanne",
-        "storeId": 1,
-        "phNo": "1-519-127-8862 x213",
-        "id": 7,
-        "Email": "Chasity@issac.us"
-      },
-      {
-        "name": "Camron",
-        "storeId": 2,
-        "phNo": "1-887-311-6378 x541",
-        "id": 8,
-        "Email": "Malvina@talia.biz"
-      },
-      {
-        " name": "Amina",
-        "storeId": 804,
-        "phNo": "839.763.8956 x8958",
-        "id": 9,
-        "Email": "Bryce.McClure@rafaela.ca"
-      }
+      "name": "Benedict",
+      "storeId": 1,
+      "phNo": "604.374.2888 x6173",
+      "id": 1,
+      "Email": "Kolby@dulce.co.uk"
+    },
+    {
+      "name": "Arvid",
+      "storeId": 1,
+      "phNo": "(832)664-0535 x321",
+      "id": 2,
+      "Email": "Santa@hayden.biz"
+    },
+    {
+      "name": "Monica",
+      "storeId": 2,
+      "phNo": "073.805.6791 x90323",
+      "id": 3,
+      "Email": "Ofelia@cyril.ca"
+    },
+    {
+      "name": "Sandra",
+      "storeId": 3,
+      "phNo": "448-745-5466 x943",
+      "id": 4,
+      "Email": "Lina.Conn@pat.co.uk"
+    },
+    {
+      "name": "Rosa",
+      "storeId": 3,
+      "phNo": "(627)930-8832",
+      "id": 5,
+      "Email": "Torey_Beier@cydney.net"
+    },
+    {
+      "name": "Sylvester",
+      "storeId": 2,
+      "phNo": "590-700-1153 x830",
+      "id": 6,
+      "Email": "Darlene@gus.co.uk"
+    },
+    {
+      "name": "Joanne",
+      "storeId": 1,
+      "phNo": "1-519-127-8862 x213",
+      "id": 7,
+      "Email": "Chasity@issac.us"
+    },
+    {
+      "name": "Camron",
+      "storeId": 2,
+      "phNo": "1-887-311-6378 x541",
+      "id": 8,
+      "Email": "Malvina@talia.biz"
+    },
+    {
+      "name": "Amina",
+      "storeId": 2,
+      "phNo": "839.763.8956 x8958",
+      "id": 9,
+      "Email": "Bryce.McClure@rafaela.ca"
+    }
   ],
   "candyTypes": [
     {
       "id": 1,
-      "type": "chocolate"
+      "type": "Milk Chocolate"
     },
     {
       "id": 2,
-      "type": "M&M"
+      "type": "Dark Chocolate"
     },
     {
       "id": 3,
-      "type": "Mint"
+      "type": "Bubble Gum"
     },
     {
       "id": 4,
-      "type": "lemon"
+      "type": "Sour"
+    },
+    {
+      "id": 5,
+      "type": "Chewy"
+    },
+    {
+      "id": 6,
+      "type": "Peanut"
     }
   ],
   "candies": [
     {
-        "id": 1,
-        "typeId": 1,
-        "name": "M&M"
-      },
-      {
-        "id": 2,
-        "typeId": 2,
-        "name": "Mint M&M"
-      }
+      "id": 1,
+      "typeId": 1,
+      "name": "M&M"
+    },
+    {
+      "id": 2,
+      "typeId": 4,
+      "name": "Nerd"
+    },
+    {
+      "id": 3,
+      "typeId": 6,
+      "name": "Reese's"
+    },
+    {
+      "id": 4,
+      "typeId": 5,
+      "name": "StarBurst"
+    },
+    {
+      "id": 5,
+      "typeId": 5,
+      "name": "Tootsie roll"
+    },{
+      "id": 6,
+      "typeId": 1,
+      "name": "Twix"
+    },
+    {
+      "id": 7,
+      "typeId": 2,
+      "name": "Harshy Kisses"
+    },
+    {
+      "id": 8,
+      "typeId": 3,
+      "name": "Double bubble"
+    }
   ]
 }

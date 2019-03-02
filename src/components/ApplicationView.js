@@ -1,11 +1,11 @@
 
 import React, { Component } from "react"
-import StoreList from "./storeList";
-import EmployeeList from "./EmployeeList";
-import CandyList from "./CandyList";
-import StoreEmployee from "./StoreEmployee";
+import StoreList from "./store/storeList";
+import EmployeeList from "./employee/EmployeeList";
+import CandyTypeList from "./candy/CandyTypeList";
+import StoreEmployee from "./store/StoreEmployee";
 import { Route } from 'react-router-dom'
-import CandyTypeList from "./CandyTypeList";
+import CandyList from "./candy/CandyList";
 import storeManager from "../modules/storeManager";
 import employeeManager from "../modules/employeeManager";
 import candiesManager from "../modules/candiesManager";
@@ -61,6 +61,15 @@ class ApplicationView extends Component {
             })
     }
 
+    fireEmployee = (emp) => {
+        if(window.confirm(`Fire -- ${emp.name}`))
+        {
+            employeeManager.delete(emp.id)
+            .then(()=>employeeManager.getAll())
+            .then(employees => this.setState({employees : employees}))
+        }
+    }
+
     render() {
         console.log(this.state.employees)
 
@@ -69,14 +78,16 @@ class ApplicationView extends Component {
                 <Route exact path="/" render={() => {
                     return <StoreList stores={this.state.stores} />
                 }} />
-                <Route path="/candy" render={() => {
-                    return <CandyList candies={this.state.candies} candyTypes={this.state.candyTypes} />
+                <Route path="/candyType" render={() => {
+                    return <CandyTypeList candies={this.state.candies} candyTypes={this.state.candyTypes} />
                 }} />
                 <Route path="/employees" render={() => {
-                    return <StoreEmployee stores={this.state.stores} employeeList={this.state.employees} />
+                    return <StoreEmployee stores={this.state.stores}
+                    employeeList={this.state.employees}
+                    fireEmployee = {this.fireEmployee} />
                 }} />
                 <Route path="/candies" render={() => {
-                    return <CandyTypeList candies={this.state.candies}
+                    return <CandyList candies={this.state.candies}
                         candyTypes={this.state.candyTypes}
                         discontinued={this.discontinued}
                         deleteAllCandies={this.deleteAllCandies}

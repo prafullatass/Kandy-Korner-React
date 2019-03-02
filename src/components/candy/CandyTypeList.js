@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import "./kandyKorner.css"
-class CandyList extends Component {
+import "../kandyKorner.css"
+class CandyTypeList extends Component {
     render() {
         return (
             <section className="margin_top">
@@ -23,4 +23,4 @@ class CandyList extends Component {
     }
 }
 
-export default CandyList
+export default CandyTypeList

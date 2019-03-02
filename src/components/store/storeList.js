@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import "./kandyKorner.css"
+import "../kandyKorner.css"
 class StoreList extends Component {
     render() {
         return (
