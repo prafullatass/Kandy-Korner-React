@@ -37,7 +37,10 @@ class ApplicationView extends Component {
         console.log(this)
         candiesManager.delete(id)
             .then(candiesManager.getAll)
-            .then(candies => this.setState({ candies: candies }))
+            .then(candies => {
+                this.setState({ candies: candies })
+                this.disableButton(candies)
+            })
     }
 
     disableButton(inputArray) {
@@ -56,17 +59,15 @@ class ApplicationView extends Component {
             .then(candies => {
                 this.setState({ candies: candies })
                 console.log(`candies : ${candies}`)
-                // document.querySelector("#delAll").disabled = true
                 this.disableButton(candies)
             })
     }
 
     fireEmployee = (emp) => {
-        if(window.confirm(`Fire -- ${emp.name}`))
-        {
+        if (window.confirm(`Fire -- ${emp.name}`)) {
             employeeManager.delete(emp.id)
-            .then(()=>employeeManager.getAll())
-            .then(employees => this.setState({employees : employees}))
+                .then(() => employeeManager.getAll())
+                .then(employees => this.setState({ employees: employees }))
         }
     }
 
@@ -83,8 +84,8 @@ class ApplicationView extends Component {
                 }} />
                 <Route path="/employees" render={() => {
                     return <StoreEmployee stores={this.state.stores}
-                    employeeList={this.state.employees}
-                    fireEmployee = {this.fireEmployee} />
+                        employeeList={this.state.employees}
+                        fireEmployee={this.fireEmployee} />
                 }} />
                 <Route path="/candies" render={() => {
                     return <CandyList candies={this.state.candies}
